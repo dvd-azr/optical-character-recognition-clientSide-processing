@@ -1,4 +1,4 @@
-progress:-webkit-progress-value {
+progress[value]::-webkit-progress-value {
 
     border-radius: 12px;
 
