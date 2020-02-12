@@ -140,7 +140,7 @@ uploadBtn.addEventListener('change', function (params) {
 ============================================== */
 
 const winOrigin = window.origin;
-console.log(window);
+console.log(winOrigin + window.location.pathname);
 console.log(window.location.pathname);
 // setting agar load dari localhost
 window.Tesseract = Tesseract.create({
