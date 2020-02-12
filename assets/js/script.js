@@ -147,7 +147,7 @@ window.Tesseract = Tesseract.create({
     // Path to worker
     workerPath: `${winOrigin+window.location.pathname}/main/worker.js`,
     // Path of folder where the language trained data is located
-    langPath: `${winOrigin}/langsdata/`,
+    langPath: `${winOrigin+window.location.pathname}/langsdata/`,
     // Path to index script of the tesseract core ! https://github.com/naptha/tesseract.js-core
     // corePath: "http://127.0.0.1:5500/index.js",
     corePath: `${winOrigin+window.location.pathname}/main/index.js`,
