@@ -25,7 +25,7 @@ Sebagai perangkat lunak yang kompleks, OCR diterapkan di berbagai bidang seperti
 2. Buka menggunakan "teks editor".
 3. jalankan dengan "live-server".
 
-➡️ [Demo](https://dvd-azr.github.io/optical-character-recognition-clientSideProcessing/)
+    ➡️ [Demo](https://dvd-azr.github.io/optical-character-recognition-clientSideProcessing/)
     
 ## Library
- - [OPTICAL CARACTER RECOGNITION (OCR)](https://github.com/naptha/tesseract.js)
+ - [Tesseract.js](https://github.com/naptha/tesseract.js)
