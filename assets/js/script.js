@@ -150,7 +150,7 @@ window.Tesseract = Tesseract.create({
     langPath: `${winOrigin}/langsdata/`,
     // Path to index script of the tesseract core ! https://github.com/naptha/tesseract.js-core
     // corePath: "http://127.0.0.1:5500/index.js",
-    corePath: `${winOrigin}/main/index.js`,
+    corePath: `${winOrigin+window.location.pathname}/main/index.js`,
 });
 
 
