@@ -1,6 +1,5 @@
 
-<img src="screenshot.png" height="auto" style="width:100%;  margin:0 
-
+<img src="screenshot.png" height="auto" style="width:100%;  margin:0">
  
 ## Prakata
 
