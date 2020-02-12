@@ -145,7 +145,7 @@ console.log(window.location.pathname);
 // setting agar load dari localhost
 window.Tesseract = Tesseract.create({
     // Path to worker
-    workerPath: `${winOrigin}/main/worker.js`,
+    workerPath: `${winOrigin+window.location.pathname}/main/worker.js`,
     // Path of folder where the language trained data is located
     langPath: `${winOrigin}/langsdata/`,
     // Path to index script of the tesseract core ! https://github.com/naptha/tesseract.js-core
