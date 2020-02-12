@@ -28,10 +28,3 @@ Sebagai perangkat lunak yang kompleks, OCR diterapkan di berbagai bidang seperti
 ## Library
  - [OPTICAL CARACTER RECOGNITION (OCR)](https://github.com/naptha/tesseract.js)  
   
-[Optical Character Recognition / OCR ](https://id.wikipedia.org/wiki/Pengenalan_karakter_optis) *(Pengenalan Karakter Optik)*  adalah sebuah perangkat lunak yang mengubah teks dalam format berkas citra atau gambar ke dalam format teks yang bisa dibaca dan disunting oleh aplikasi komputer [1]. Berkas teks berformat citra tersebut didapatkan dengan cara memindai atau memfoto sebuah buku, manuskrip, tulisan di papan pengumuman, ataupun materi kuliah di papan tulis dsb. Sedangkan alat yang diunakan untuk memindai adalah pemindai *(scanner)* atau kamera baik kamera DSLR ataupun kamera di ponsel pintar.
-
-Sebagai perangkat lunak yang kompleks, OCR diterapkan di berbagai bidang seperti untuk membaca data secara otomatis dan langsung memasukkannya ke dalam basis data -- contohnya seperti dalam pemindaian passport, nota transfer bank, kertas berharga – untuk pengenalan pelat kendaraan bermotor dari video atau gambar yang tertangkap kamera, dan yang paling marak adalah untuk preservasi konten buku-buku sumber referensi utama dan manuskrip bersejarah. Dalam beberapa kasus, OCR berkontribusi sangat besar dalam proses pembangunan perpustakaan digital.
-
-
-- OPTICAL CARACTER RECOGNITION (OCR)
-https://github.com/naptha/tesseract.js
