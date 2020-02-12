@@ -140,16 +140,17 @@ uploadBtn.addEventListener('change', function (params) {
 ============================================== */
 
 const winOrigin = window.origin;
-console.log(window.origin);
+console.log(window);
+console.log(window.location.pathname);
 // setting agar load dari localhost
 window.Tesseract = Tesseract.create({
     // Path to worker
-    workerPath: `${winOrigin}/worker.js`,
+    workerPath: `${winOrigin}/main/worker.js`,
     // Path of folder where the language trained data is located
     langPath: `${winOrigin}/langsdata/`,
     // Path to index script of the tesseract core ! https://github.com/naptha/tesseract.js-core
     // corePath: "http://127.0.0.1:5500/index.js",
-    corePath: `${winOrigin}/index.js`,
+    corePath: `${winOrigin}/main/index.js`,
 });
 
 
