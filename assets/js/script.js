@@ -11,18 +11,6 @@ const sampleBtn = document.querySelector('.sample'),
     tooltip = document.getElementById("myTooltip"),
     process = document.querySelector('#process');
 
-// resultText.addEventListener('mouseenter', function () {
-//     // console.log('enter');
-//     copyBtn.style = "opacity: 1"
-
-// }, false);
-
-// resultText.addEventListener('mouseleave', function () {
-//     // console.log('leave');
-//     copyBtn.style.opacity = "";
-
-// }, false)
-
 
 copyBtn.addEventListener('click', function () {
     let preText = resultText.querySelector('pre'),
@@ -33,10 +21,8 @@ copyBtn.addEventListener('click', function () {
     selection.removeAllRanges();
     selection.addRange(range);
 
-
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
-
 
     // update tooltip text
     tooltip.innerHTML = "Copied";
@@ -46,9 +32,7 @@ copyBtn.addEventListener('click', function () {
 })
 
 sampleBtn.addEventListener('click', function () {
-    console.log('sample');
-    // console.log(imgPrev.src);
-    // console.log(this);
+    console.log('Load sample Img');
 
     imgPrev.src = 'puisi.jpg';
     imgPrev.style = 'display :block;';
@@ -58,7 +42,6 @@ sampleBtn.addEventListener('click', function () {
 
     prevContainer.querySelector('.overlay').style = "display :none";
 
-    // console.log(this.parentElement.parentElement.parentElement);
     process.scrollIntoView({
         behavior: 'smooth',
         block: 'center'
@@ -67,9 +50,6 @@ sampleBtn.addEventListener('click', function () {
 })
 
 prevContainer.addEventListener('mouseenter', function (e) {
-    // console.log(e);
-    // console.log(this.querySelector('.overlay').clientHeight);
-    // console.log(this.querySelector('img').clientHeight);
 
     if (imgPrev.currentSrc == '') {
         // console.log("null mase");
@@ -139,18 +119,30 @@ uploadBtn.addEventListener('change', function (params) {
 * Tesseract Config
 ============================================== */
 
-const winOrigin = window.origin;
-console.log(winOrigin + window.location.pathname);
-console.log(window.location.pathname);
+const winOrigin = window.origin,
+    pathName = window.location.pathname,
+    // pathName = '/repo/sub/index.html',
+    href = window.location.href;
+
+let urlConfig = winOrigin;
+
+if (pathName.includes("index.html")) {
+    console.log("includes index.html");
+    urlConfig = urlConfig + pathName.slice(0, -10)
+    console.log(urlConfig);
+
+}
+
 // setting agar load dari localhost
 window.Tesseract = Tesseract.create({
     // Path to worker
-    workerPath: `${winOrigin+window.location.pathname}/main/worker.js`,
+    workerPath: `${urlConfig}main/worker.js`,
     // Path of folder where the language trained data is located
-    langPath: `${winOrigin+window.location.pathname}/langsdata/`,
+    // langPath: `${winOrigin+window.location.pathname}/langsdata/`,
+    langPath: `${urlConfig}langsdata/`,
     // Path to index script of the tesseract core ! https://github.com/naptha/tesseract.js-core
     // corePath: "http://127.0.0.1:5500/index.js",
-    corePath: `${winOrigin+window.location.pathname}/main/index.js`,
+    corePath: `${urlConfig}main/index.js`,
 });
 
 
