@@ -131,6 +131,9 @@ if (pathName.includes("index.html")) {
     urlConfig = urlConfig + pathName.slice(0, -10)
     console.log(urlConfig);
 
+} else {
+    urlConfig = urlConfig + pathName;
+
 }
 
 // setting agar load dari localhost
